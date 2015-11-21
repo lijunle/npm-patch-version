@@ -3,8 +3,9 @@
 /* eslint-disable no-console */
 
 var patchVersion = require('../src/index');
+var getServiceTag = require('../src/service-tag');
 
 var dir = process.argv[2] || process.cwd();
-var version = process.env.TRAVIS_TAG || '0.0.1';
+var version = getServiceTag();
 
 patchVersion(dir, version, console.log, console.error, process.exit);
