@@ -21,7 +21,7 @@ deploy:
   skip_cleanup: true
   email: "lijunle@gmail.com"
   api_key:
-    secure: "cSC/2o1T1T5CswkA1UwoLRgH7QimCZUHFX/KwRPwS9p/8oJhbuUOtiZ3mHX9bkCav3SUX78keiIG4ciALrCHGUz2DvJ5DTCW+2Myl+yn6JP9UEuv37bLsJQSjPcZ/SLJp7ml/xy+i/S8sJPhSP7Etc8iqLPAvoCV3HGCoCEw1H8="
+    secure: "Wz9BhLvelFVTkQJVIm4aG/eksWTECvA6OeTjQZXwq0eXf+YW90xM0WgE7LnsJaJCpazqnCgqk6lMv+1Kw1dzReiV1WIa53Qswcdo7RKJ8LlOUy9zE7quK2av/orPxz/WnxxslB6DJKWNX3YQdKmlHznL0mycFPId+GIey9khQiPalFYXD6cDoxk5XuJWSheZ8pzxZTlLCbX26PpzN+x8G0Dl9fDjUhvl4jEHbJjs+mv3YVZ4iTN+SvJVEl+84ilZDHZm4q6QGd2qrwJpiCxtI5sh4wGPlTO6w+zNAmPPL0fpXzqJfppUUX+i8ItrMpuVGAoDCfrw1PM6vgO3UqQkjiwovwPJyzaTgyl8FrRXhy0he8w1/Knfvu9fioKINu04AYWiMeiqxNl0p4294CjtSxv0lo4pS1OQSKGV9HU8E2j3Xao+iYqkKqFWvsSlhHbWTSEbvGVrJNTzfSkS7aYWUe28eZeMn9MWC47aTwkscvimSL5BOUhOu8qlIZgs+mwXv0NanuT66x8WldeArFFRPyVY0FlkfE6t0iwMS/pKmKDbJTEtIPRbt6CerMqcFInYkA6WGM1RETtR6CgDQSvO2SCbCFyOzS8aN0Bp6T37OycmKVQY1kwgkMFbgaxsmepSkDQRnii3yPb8zc4r3smaMCNPj5XsNAi8Q3+Wh6RQ0rc="
   on:
     tags: true
     node: 5
