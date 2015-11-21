@@ -63,3 +63,21 @@ test(function testPatchVersion(t) {
       return fsp.writeFile(file, t.context.content);
     });
 });
+
+test(function testFileNotFound(t) {
+  var version = '0.0.3';
+  var log = storage();
+  var error = storage();
+  var exit = storage();
+
+  return patchVersion(__dirname, version, log, error, exit)
+    .then(function assert() {
+      var metadata = require('./fake/package.json');
+      t.same(metadata.version, '0.0.1');
+      t.same(metadata.name, 'fake');
+      t.ok(include(error.value, 'ENOENT'));
+      t.ok(include(error.value, path.resolve(__dirname, './package.json')));
+      t.ok(log.value === '');
+      t.ok(exit.value === -1);
+    });
+});

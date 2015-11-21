@@ -19,7 +19,7 @@ module.exports = function patchVersion(dir, version, log, error, exit) {
       log(format('Patch version %s to file %s', version, packagePath));
       exit(0);
     }, function fail(exception) {
-      error(exception);
+      error(exception.toString());
       exit(-1);
     });
 };
