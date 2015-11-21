@@ -1,0 +1,27 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - 0.10
+  - 0.12
+  - 3
+  - 4
+  - 5
+
+script:
+  - npm run lint
+  - npm run test
+
+before_deploy:
+  - node ./bin/patch-version
+
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: "lijunle@gmail.com"
+  api_key:
+    secure: "cSC/2o1T1T5CswkA1UwoLRgH7QimCZUHFX/KwRPwS9p/8oJhbuUOtiZ3mHX9bkCav3SUX78keiIG4ciALrCHGUz2DvJ5DTCW+2Myl+yn6JP9UEuv37bLsJQSjPcZ/SLJp7ml/xy+i/S8sJPhSP7Etc8iqLPAvoCV3HGCoCEw1H8="
+  on:
+    tags: true
+    node: 5
