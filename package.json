@@ -1,0 +1,24 @@
+{
+  "name": "patch-version",
+  "version": "0.0.1",
+  "description": "Patch version control tag version to package.json when deploy to npm on CI.",
+  "author": "Junle Li <lijunle@gmail.com>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bin": {
+    "patch-version": "bin/patch-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lijunle/npm-patch-version.git"
+  },
+  "keywords": [
+    "npm",
+    "version",
+    "patch",
+    "patch-version",
+    "ci"
+  ],
+  "scripts": {
+  }
+}
