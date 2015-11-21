@@ -20,5 +20,10 @@
     "ci"
   ],
   "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^1.10.1",
+    "eslint-config-airbnb": "^1.0.0"
   }
 }
