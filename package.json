@@ -20,12 +20,14 @@
     "ci"
   ],
   "scripts": {
+    "test": "ava",
     "lint": "eslint ."
   },
   "dependencies": {
     "es6-promise": "^3.0.2"
   },
   "devDependencies": {
+    "ava": "^0.5.0",
     "eslint": "^1.10.1",
     "eslint-config-airbnb": "^1.0.0"
   }
