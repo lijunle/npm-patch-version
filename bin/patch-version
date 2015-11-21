@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+/* eslint-disable no-console */
+
+var patchVersion = require('../src/index');
+
+var dir = process.argv[2] || process.cwd();
+var version = process.env.TRAVIS_TAG || '0.0.1';
+
+patchVersion(dir, version, console.log, console.error, process.exit);
