@@ -24,9 +24,6 @@
     "lint": "eslint .",
     "depcheck": "depcheck"
   },
-  "dependencies": {
-    "es6-promise": "^3.0.2"
-  },
   "devDependencies": {
     "ava": "^0.5.0",
     "depcheck": "^0.5.10",

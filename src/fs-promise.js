@@ -1,5 +1,4 @@
 var fs = require('fs');
-var Promise = require('es6-promise').Promise;
 
 exports.readFile = function readFile(filePath) {
   return new Promise(function readFilePromise(resolve, reject) {
