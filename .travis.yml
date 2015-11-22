@@ -15,13 +15,21 @@ script:
 
 before_deploy:
   - node ./bin/patch-version
+  - gem install mime-types -v 2.6.2
 
 deploy:
-  provider: npm
-  skip_cleanup: true
-  email: "lijunle@gmail.com"
-  api_key:
-    secure: "Wz9BhLvelFVTkQJVIm4aG/eksWTECvA6OeTjQZXwq0eXf+YW90xM0WgE7LnsJaJCpazqnCgqk6lMv+1Kw1dzReiV1WIa53Qswcdo7RKJ8LlOUy9zE7quK2av/orPxz/WnxxslB6DJKWNX3YQdKmlHznL0mycFPId+GIey9khQiPalFYXD6cDoxk5XuJWSheZ8pzxZTlLCbX26PpzN+x8G0Dl9fDjUhvl4jEHbJjs+mv3YVZ4iTN+SvJVEl+84ilZDHZm4q6QGd2qrwJpiCxtI5sh4wGPlTO6w+zNAmPPL0fpXzqJfppUUX+i8ItrMpuVGAoDCfrw1PM6vgO3UqQkjiwovwPJyzaTgyl8FrRXhy0he8w1/Knfvu9fioKINu04AYWiMeiqxNl0p4294CjtSxv0lo4pS1OQSKGV9HU8E2j3Xao+iYqkKqFWvsSlhHbWTSEbvGVrJNTzfSkS7aYWUe28eZeMn9MWC47aTwkscvimSL5BOUhOu8qlIZgs+mwXv0NanuT66x8WldeArFFRPyVY0FlkfE6t0iwMS/pKmKDbJTEtIPRbt6CerMqcFInYkA6WGM1RETtR6CgDQSvO2SCbCFyOzS8aN0Bp6T37OycmKVQY1kwgkMFbgaxsmepSkDQRnii3yPb8zc4r3smaMCNPj5XsNAi8Q3+Wh6RQ0rc="
-  on:
-    tags: true
-    node: 5
+  - provider: npm
+    skip_cleanup: true
+    email: "lijunle@gmail.com"
+    api_key:
+      secure: "Wz9BhLvelFVTkQJVIm4aG/eksWTECvA6OeTjQZXwq0eXf+YW90xM0WgE7LnsJaJCpazqnCgqk6lMv+1Kw1dzReiV1WIa53Qswcdo7RKJ8LlOUy9zE7quK2av/orPxz/WnxxslB6DJKWNX3YQdKmlHznL0mycFPId+GIey9khQiPalFYXD6cDoxk5XuJWSheZ8pzxZTlLCbX26PpzN+x8G0Dl9fDjUhvl4jEHbJjs+mv3YVZ4iTN+SvJVEl+84ilZDHZm4q6QGd2qrwJpiCxtI5sh4wGPlTO6w+zNAmPPL0fpXzqJfppUUX+i8ItrMpuVGAoDCfrw1PM6vgO3UqQkjiwovwPJyzaTgyl8FrRXhy0he8w1/Knfvu9fioKINu04AYWiMeiqxNl0p4294CjtSxv0lo4pS1OQSKGV9HU8E2j3Xao+iYqkKqFWvsSlhHbWTSEbvGVrJNTzfSkS7aYWUe28eZeMn9MWC47aTwkscvimSL5BOUhOu8qlIZgs+mwXv0NanuT66x8WldeArFFRPyVY0FlkfE6t0iwMS/pKmKDbJTEtIPRbt6CerMqcFInYkA6WGM1RETtR6CgDQSvO2SCbCFyOzS8aN0Bp6T37OycmKVQY1kwgkMFbgaxsmepSkDQRnii3yPb8zc4r3smaMCNPj5XsNAi8Q3+Wh6RQ0rc="
+    on:
+      tags: true
+      node: 5
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: UQYj6ol8wv+HHLMVR1xrsnwW3IMUvp1hmN2hc2HXpRN1ef3AEiS9yvQbKsoEAAokqvraitmkPpTHgdi6kv/h1zIDToJG2rlbneWNRHEtZblvh+ajRMkaLkqLovde0jVKldQJRflxMrXDAjN/s5tLxO5rKjlm4DaZD8D0sabtquVwOySY7Fn/XKuSFtfIfiFOD0y2HYmyuyeMIor/5FbAGRc4DGvh7EgAcLXbRiEN3HOjm1jzaY8Eou0d3bss0OLIg1+a0EKI3FKELo6XOkhiyTQjVvUbXG7igbBabO139EEFQv/ifISK5EszAudKmQQAkKTJ4LCJag7y+VjPTy/0bLkN3r0sr5Wz+iHCBCppj1zvPlZYnC/JS2fB7N5xok9FUrANQwQUYIae7pjQ80JuPcXEp+5ucNINCkNcDomFsWYETNKpfFUpKEOt6LMyCQRDu5WbFy5sUeJXopp4OYu2MA8Y8x0vdj+qVf5JcjqWMdJEYwVO+8Y7YAmvNIQkVJd55ZdNVSHQYQJFP054ixr38OFzJWmMvtwBJyQqILmJWdhJSJXSB93CeKDsdKcSHPd1cQJYS6Xet0kPqeXbDUAwKHrXDlO1JhZg3dI7LwaEWMA3ixwntJ2UgImgTd/gD4F6Z74Vt4K0tsY9CjBW1dhIG9Ohm0uc6mGU66ghWfeLcLk=
+    on:
+      tags: true
+      node: 5
