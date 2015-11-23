@@ -17,7 +17,7 @@ Patch git tag version to package.json before publish to npm.
 
 ## Example
 
-Here is the example configuration in `.travis.yml` for Travis CI:
+Here is the example configuration for Travis CI. A full example could be the [.travis.yml](https://github.com/lijunle/npm-patch-version/blob/master/.travis.yml) file of this project.
 
 ```yaml
 before_deploy:
@@ -28,8 +28,9 @@ deploy:
   email: "my@email"
   api_key:
     secure: "secure-key"
+  on:
+    tags: true
 ```
-
 
 ## License
 
