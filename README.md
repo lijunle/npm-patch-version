@@ -25,9 +25,9 @@ before_deploy:
 
 deploy:
   provider: npm
-  email: "my@email"
+  email: my@email.com
   api_key:
-    secure: "secure-key"
+    secure: this-is-my-secure-key
   on:
     tags: true
 ```
